@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="trail.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section id="home" class="home-section">
+        <div class="container">
+            <img id="picture" src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png">
+            <h1>Welcome to My Portfolio</h1>
+            <h2>I am Prathamesh!!!</h2>
+            <p>Discover my education, skills, about me and contact information.</p>
+            
+        </div>
+    </section>
+
+    <section id="info" class="info-section">
+        <div class="container">
+            <img id="img" src="https://via.placeholder.com/120" alt="Profile img">
+
+            <h2 id="N">Name :</h2>
+            <h2 id="P">Profession :</h2>
+            <h2 id="Y">Studing year :</h2>
+            <h2 id="R">Roll No :</h2>
+        </div>
+        <button onclick="update()"><b>update my Portfolio</b></button>
+    </section>
+
+   
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2>Education</h2>
+            <p><b>Information about my educational background.</b></p>
+            <ul>
+                <li>Attended D.Y.Patil college of Engineering and Management .</li>
+                <li>Suffering in CSE branch,second year.</li>
+               
+            </ul>
+        </div>
+    </section>
+
+   
+    <section id="skill" class="skill-section">
+        <div class="container">
+            <h2>Skills</h2>
+          
+            <ul>
+                <li>C</li>
+                <li>Python</li>
+                <li>Learning JAVA</li>
+                <li>Web Development</li>
+                
+            </ul>
+        </div>
+    </section>
+
+    
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate developer with a strong background in web technologies. I love solving problems and creating intuitive user experiences. With a combination of creativity and technical skills, I aim to deliver high-quality projects for clients.</p>
+        </div>
+    </section>
+
+   
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <li>Contact no. 1234567891</li>
+            <li>Gmail - xyz@gmail.com</li>
+        </div>
+    </section>
+
+   
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function update() {
+            let Name = prompt("Please enter your name :");
+            
+            let Profession = prompt("Plaese enter your profession :");
+            
+            let year = prompt("In which year you are studing ? :");
+            
+            let roll = prompt("Plaese enter your Roll No :");
+            
+            let pitcure = prompt("Please provide the URL of your profile picture:");
+
+            if(!Name || !Profession || !year || !roll || !picture){
+                alert("don't keep empty.");
+                return;
+            }
+         
+            alert(`Name:${Name}\nProfession:${Profession}\nyear:${year}\nroll:${roll}`);
+            console.log(`Name:${Name}`);
+            console.log(`Profession:${Profession}`);
+            console.log(`year:${year}`);
+            console.log(`roll:${roll}`);
+
+            document.getElementById("N").innerText = `Name:${Name}`;
+            document.getElementById("P").innerText = `Profession:${Profession}`;
+            document.getElementById("Y").innerText = `year:${year}`;
+            document.getElementById("R").innerText = `roll:${roll}`;
+ 
+        }
+
+        if (picture)
+		{
+			document.getElementById("img").src = profilePitcure;
+		}
+		else
+		{
+			alert("URL is not provided.");
+		}
+
+        
+
+    </script>
+</body>
+</html>
+
+
